@@ -1,0 +1,64 @@
+@mixin oldstyle {
+  font-variant-numeric: oldstyle-nums;
+  -moz-font-feature-settings: "onum";
+  -webkit-font-feature-settings: "onum";
+  font-feature-settings: "onum";
+}
+
+@mixin lining {
+  font-variant-numeric: tabular-nums;
+  -moz-font-feature-settings: "tnum";
+  -webkit-font-feature-settings: "tnum";
+  font-feature-settings: "tnum";
+}
+
+$sans : lato,helvetica, sans-serif;
+$serif : georgia,serif;
+
+$minor-second : 1.067;
+$major-second : 1.125;
+$minor-third : 1.2;
+$major-third : 1.25;
+$perfect-fourth : 1.333;
+$augmented-fourth: 1.41; 
+$perfect-fifth: 1.5;
+$golden : 1.618;
+
+$type-scale: $minor-third;
+
+$type-size-1: 1rem;
+$type-size-0: $type-size-1/$type-scale;
+$type-size-00: $type-size-0/$type-scale;
+$type-size-000: $type-size-00/$type-scale;
+
+$type-size-2: $type-size-1*$type-scale;
+$type-size-3: $type-size-2*$type-scale;
+$type-size-4: $type-size-3*$type-scale;
+$type-size-5: $type-size-4*$type-scale;
+$type-size-6: $type-size-5*$type-scale;
+$type-size-7: $type-size-6*$type-scale;
+$type-size-8: $type-size-7*$type-scale;
+
+
+$type-size: 11pt;
+$baseline: 1.6;
+
+html {
+	font-family:$sans;
+	font-size:$type-size;
+	line-height:$baseline;
+}
+
+h1 {
+  font-size:$type-size-5;
+  margin:2rem 0 1rem;
+}
+
+h2 {
+  margin-bottom:2rem;
+  font-size:$type-size-3;
+}
+
+p {
+  margin-bottom:1rem;
+}
